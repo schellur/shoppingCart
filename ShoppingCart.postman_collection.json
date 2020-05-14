@@ -1,0 +1,223 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ShoppingCart",
+		"_postman_id": "4d72c76d-8ddc-eb3b-6d94-2131168059c3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addBookProducts",
+			"request": {
+				"url": "http://localhost:8080/addBookProducts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n\t{\r\n\t\t\"productName\" : \"Think and Grow Rich\",\r\n\t\t\"productPrice\" : 99,\r\n\t\t\"genre\" : \"Motivational\",\r\n\t\t\"author\" : \"Napolean Hill\",\r\n\t\t\"publications\" : \"Amazing Reads\"\r\n\t},\r\n\t{\r\n\t\t\"productName\" : \"Life is What You Make It\",\r\n\t\t\"productPrice\" : 119,\r\n\t\t\"genre\" : \"Motivational\",\r\n\t\t\"author\" : \"Preeti Shenoy\",\r\n\t\t\"publications\" : \"Srishti Publishers\"\r\n\t},\r\n\t{\r\n\t\t\"productName\" : \"Thoughts to Inspire: Swami Vivekanand\",\r\n\t\t\"productPrice\" : 115.4,\r\n\t\t\"genre\" : \"Motivaional\",\r\n\t\t\"author\" : \"Swami vivekanand\",\r\n\t\t\"publications\" : \"Amazing Reads\"\r\n\t}\r\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "viewCart",
+			"request": {
+				"url": "http://localhost:8080/viewCart",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"userId\": \"John\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addApparelProducts",
+			"request": {
+				"url": "http://localhost:8080/addApparelProducts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n\t{\r\n\t\t\"productName\" : \"Shirt\",\r\n\t\t\"productPrice\" : 2000.9,\r\n\t\t\"type\" : \"Cotton\",\r\n\t\t\"brand\" : \"Siyarams\",\r\n\t\t\"design\" : \"Printed\"\r\n\t},\r\n\t{\r\n\t\t\"productName\" : \"Trousers\",\r\n\t\t\"productPrice\" : 1200.4,\r\n\t\t\"type\" : \"Jeans\",\r\n\t\t\"brand\" : \"Lee\",\r\n\t\t\"design\" : \"Torn\"\r\n\t},\r\n\t{\r\n\t\t\"productName\" : \"T-Shirt\",\r\n\t\t\"productPrice\" : 3200.4,\r\n\t\t\"type\" : \"Sports\",\r\n\t\t\"brand\" : \"Jockey\",\r\n\t\t\"design\" : \"Sports\"\r\n\t}\r\n]\r\n\r\n \r\n\r\n \r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "productById",
+			"request": {
+				"url": "http://localhost:8080/product/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "productByCategory",
+			"request": {
+				"url": "http://localhost:8080/products/Apparel",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "productsByName",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/products?name=Shirt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Shirt",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addUser",
+			"request": {
+				"url": "http://localhost:8080/addUser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"userId\" : \"John\",\r\n\t\"userName\" : \"John\"\r\n}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "addCart",
+			"request": {
+				"url": "http://localhost:8080/addCart",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"John\",\r\n    \"productId\": 2\r\n}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProductById",
+			"request": {
+				"url": "http://localhost:8080/deleteProductById",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"John\",\r\n    \"productId\" : 2\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProductByUser",
+			"request": {
+				"url": "http://localhost:8080/deleteProductByUser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"John\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateCart",
+			"request": {
+				"url": "http://localhost:8080/updateCart",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"John\",\r\n    \"productId\": 1,\r\n    \"quantity\" :10\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
